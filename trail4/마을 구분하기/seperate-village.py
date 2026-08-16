@@ -12,7 +12,8 @@ def dfs(cur_r,cur_c):
 
     stack=deque()
     stack.append((cur_r,cur_c))
-    result=0
+    visited[cur_r][cur_c]=1
+    result=1
 
     while stack:
         cur_r,cur_c=stack.pop()
@@ -43,7 +44,4 @@ for r in range(n):
 print(len(answer))
 
 for cur in sorted(answer):
-    if cur==0:
-        print(1)
-    else:
-        print(cur)
+    print(cur)
